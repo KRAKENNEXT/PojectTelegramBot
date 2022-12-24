@@ -21,10 +21,10 @@ public class AceSpeed extends AceBase{
 
     @Override
     public String toString() {
-        return "AceSpeed{" +
-                "speed='" + speed + '\'' +
-                ", colour='" + colour + '\'' +
-                ", date='" + date + '\'' +
+        return "AceSpeed{\n" +
+                "speed='" + speed + '\'' + '\n'+
+                ", colour='" + colour + '\'' + '\n'+
+                ", date='" + date + '\'' + '\n'+
                 '}';
     }
 }

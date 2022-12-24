@@ -21,10 +21,10 @@ public class AceDensity extends AceBase{
 
     @Override
     public String toString() {
-        return "AceDensity{" +
-                "density='" + density + '\'' +
-                ", colour='" + colour + '\'' +
-                ", date='" + date + '\'' +
+        return "AceDensity{\n" +
+                "density='" + density + '\'' + '\n'+
+                ", colour='" + colour + '\'' + '\n'+
+                ", date='" + date + '\'' + '\n'+
                 '}';
     }
 }

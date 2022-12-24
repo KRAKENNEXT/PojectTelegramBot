@@ -21,10 +21,10 @@ public class AceBz extends AceBase{
 
     @Override
     public String toString() {
-        return "AceBz{" +
-                "bz='" + bz + '\'' +
-                ", colour='" + colour + '\'' +
-                ", date='" + date + '\'' +
+        return "AceBz {\n" +
+                "bz='" + bz + '\'' + '\n'+
+                ", colour='" + colour + '\'' + '\n'+
+                ", date='" + date + '\'' + '\n'+
                 '}';
     }
 }

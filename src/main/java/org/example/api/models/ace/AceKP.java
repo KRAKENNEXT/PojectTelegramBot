@@ -24,10 +24,10 @@ public class AceKP extends AceBase{
 
     @Override
     public String toString() {
-        return "AceKP{" +
-                "kp='" + kp + '\'' +
-                ", kpColour='" + kpColour + '\'' +
-                ", date='" + date + '\'' +
+        return "AceKP{\n" +
+                "kp='" + kp + '\'' + '\n'+
+                ", kpColour='" + kpColour + '\'' + '\n'+
+                ", date='" + date + '\'' + '\n'+
                 '}';
     }
 }
