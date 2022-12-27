@@ -21,10 +21,9 @@ public class AceBz extends AceBase{
 
     @Override
     public String toString() {
-        return "AceBz {\n" +
-                "bz='" + bz + '\'' + '\n'+
-                ", colour='" + colour + '\'' + '\n'+
-                ", date='" + date + '\'' + '\n'+
-                '}';
+        return "Информация по параметру BZ\n" +
+                "Дата замера: "+date+"\n" +
+                "BZ: "+bz+"\n" +
+                "Цвет: "+colour;
     }
 }

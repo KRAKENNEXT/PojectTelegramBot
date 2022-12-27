@@ -24,10 +24,9 @@ public class AceKP extends AceBase{
 
     @Override
     public String toString() {
-        return "AceKP{\n" +
-                "kp='" + kp + '\'' + '\n'+
-                ", kpColour='" + kpColour + '\'' + '\n'+
-                ", date='" + date + '\'' + '\n'+
-                '}';
+        return "Информация по параметру KP\n" +
+                "Дата замера: "+date+"\n" +
+                "KP: "+kp+"\n" +
+                "Цвет: "+kpColour;
     }
 }

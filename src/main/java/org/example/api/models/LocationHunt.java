@@ -51,14 +51,12 @@ public class LocationHunt {
 
     @Override
     public String toString() {
-        return "LocationHunt{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", subdivision='" + subdivision + '\'' +
-                ", country='" + country + '\'' +
-                ", lat='" + lat + '\'' +
-                ", longLocation='" + longLocation + '\'' +
-                '}';
+
+        return "Информация о "+name+"\n" +
+                "Описание: "+description+"\n" +
+                "Подразделение: "+subdivision+"\n" +
+                "Страна: "+country+"\n" +
+                "Широта: "+lat+"\n" +
+                "Долгота: "+longLocation;
     }
 }

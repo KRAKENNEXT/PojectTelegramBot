@@ -29,6 +29,12 @@ public class Auroras {
         return SerializeToObject.serializeToLocationHunt(sendRequest(url));
     }
 
+    public LocationHunt getSearchLocation(String id) throws ServiceNotAvailableException, ProcessingDataException, ClientException {
+        List<LocationHunt> allLocations = getLocationsForHunt();
+
+        return allLocations.stream().filter(i->i.getId().equals(id)).findFirst().orElseThrow();
+    }
+
     public AceKP getAceKp() throws ServiceNotAvailableException, ProcessingDataException, ClientException {
         String url = "https://api.auroras.live/v1/?type=ace&data=kp";
         return SerializeToObject.serializeToAceKP(sendRequest(url));

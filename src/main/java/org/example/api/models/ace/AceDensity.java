@@ -21,10 +21,9 @@ public class AceDensity extends AceBase{
 
     @Override
     public String toString() {
-        return "AceDensity{\n" +
-                "density='" + density + '\'' + '\n'+
-                ", colour='" + colour + '\'' + '\n'+
-                ", date='" + date + '\'' + '\n'+
-                '}';
+        return "Информация по параметру DENSITY\n" +
+                "Дата замера: "+date+"\n" +
+                "Плотность: "+density+"\n" +
+                "Цвет: "+colour;
     }
 }

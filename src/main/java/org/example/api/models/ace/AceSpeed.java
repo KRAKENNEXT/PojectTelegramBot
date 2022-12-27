@@ -21,10 +21,9 @@ public class AceSpeed extends AceBase{
 
     @Override
     public String toString() {
-        return "AceSpeed{\n" +
-                "speed='" + speed + '\'' + '\n'+
-                ", colour='" + colour + '\'' + '\n'+
-                ", date='" + date + '\'' + '\n'+
-                '}';
+        return "Информация по параметру скорость\n" +
+                "Дата замера: "+date+"\n" +
+                "Скорость: "+speed+"\n" +
+                "Цвет: "+colour;
     }
 }

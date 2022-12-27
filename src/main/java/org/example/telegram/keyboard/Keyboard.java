@@ -51,4 +51,11 @@ public class Keyboard {
 
         return BuildMessageMedia.buildEditMessageMedia(chatId, markup, messageId, photo, HUNT, message);
     }
+
+    public StreamFile drawInfoLocation(String chatId, int messageId, String message){
+        var markup  = new InlineKeyboardMarkup((BuildKeyboard.buildLocation()));
+        InputStream photo = this.getClass().getResourceAsStream(HUNT);
+
+        return BuildMessageMedia.buildEditMessageMedia(chatId, markup, messageId, photo, HUNT, message);
+    }
 }

@@ -4,7 +4,6 @@ import org.example.api.models.LocationHunt;
 import org.example.telegram.keyboard.button.Button;
 import org.example.telegram.keyboard.button.ButtonId;
 import org.example.telegram.keyboard.button.ButtonRows;
-import org.telegram.telegrambots.meta.api.objects.Location;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
 import java.util.ArrayList;
@@ -37,4 +36,9 @@ public class BuildKeyboard {
 
        return  ButtonRows.createKeyboardForHunt(buttons);
     }
+
+    public static List<List<InlineKeyboardButton>> buildLocation(){
+        return ButtonRows.createKeyboard(List.of(new Button("Назад", ButtonId.HUNT)));
+    }
+
 }

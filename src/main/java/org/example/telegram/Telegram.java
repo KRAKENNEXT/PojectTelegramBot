@@ -4,6 +4,7 @@ import org.example.api.Auroras;
 import org.example.api.exceptions.ClientException;
 import org.example.api.exceptions.ProcessingDataException;
 import org.example.api.exceptions.ServiceNotAvailableException;
+import org.example.api.models.LocationHunt;
 import org.example.telegram.helper.Helper;
 import org.example.telegram.helper.StreamFile;
 import org.example.telegram.keyboard.Keyboard;
@@ -91,9 +92,15 @@ public class Telegram extends TelegramLongPollingBot {
         }
     }
 
-    private void processingClickButton(CallbackQuery callbackQuery, String button){
+    private void processingClickButton(CallbackQuery callbackQuery, String button) {
         String chatId = callbackQuery.getMessage().getChatId().toString();
         int messageId = callbackQuery.getMessage().getMessageId();
+
+        try{
+            sendEditPhotoMessage(keyboard.drawInfoLocation(chatId, messageId, api.getSearchLocation(button).toString()));
+        }catch ( ServiceNotAvailableException | ProcessingDataException | ClientException ex){
+            sendText(ex.getMessage(), chatId);
+        }
     }
 
     private void sendPhotoMessage(StreamFile message){

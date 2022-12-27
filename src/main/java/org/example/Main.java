@@ -17,6 +17,14 @@ import java.net.http.HttpResponse;
 
 public class Main {
     public static void main(String[] args) throws TelegramApiException {
+        try{
+            start();
+        }catch (TelegramApiException ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static void start() throws TelegramApiException {
         Telegram telegramBot = new Telegram();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         telegramBotsApi.registerBot(telegramBot);
