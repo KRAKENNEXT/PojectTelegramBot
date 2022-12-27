@@ -47,24 +47,25 @@ public class TestApplication {
 
     @Test
     public void testGetAceKP() throws ServiceNotAvailableException, ProcessingDataException, ClientException {
+        assertDoesNotThrow(api::getAceKp);
         assertInstanceOf(AceKP.class, api.getAceKp());
     }
 
     @Test
     public void testGetBZ() throws ServiceNotAvailableException, ProcessingDataException, ClientException {
+        assertDoesNotThrow(api::getAceBz);
         assertInstanceOf(AceBz.class, api.getAceBz());
     }
 
     @Test
     public void testGetDensity() throws ServiceNotAvailableException, ProcessingDataException, ClientException {
+        assertDoesNotThrow(api::getAceDensity);
         assertInstanceOf(AceDensity.class, api.getAceDensity());
     }
 
     @Test
     public void testGetSpeed() throws ServiceNotAvailableException, ProcessingDataException, ClientException {
+        assertDoesNotThrow(api::getAceSpeed);
         assertInstanceOf(AceSpeed.class, api.getAceSpeed());
     }
-
-
-
 }
